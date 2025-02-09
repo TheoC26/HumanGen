@@ -40,3 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 docs/context.md
+
+# Admin folder
+/app/admin/
+/app/admin/*
