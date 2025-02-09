@@ -33,9 +33,9 @@ export default function HomePage() {
   }, []);
 
   const handleLike = useCallback((artworkId, newLikes) => {
-    setArtworks(prevArtworks => {
+    setArtworks((prevArtworks) => {
       // Find the artwork that was liked
-      const artworkIndex = prevArtworks.findIndex(a => a.id === artworkId);
+      const artworkIndex = prevArtworks.findIndex((a) => a.id === artworkId);
       if (artworkIndex === -1) return prevArtworks;
 
       // Create a new array with the updated artwork
@@ -43,7 +43,6 @@ export default function HomePage() {
       newArtworks[artworkIndex] = {
         ...newArtworks[artworkIndex],
         likes: newLikes,
-        hasLiked: !newArtworks[artworkIndex].hasLiked // Toggle the hasLiked status
       };
 
       // Sort by likes (descending) and then by creation date (descending)
