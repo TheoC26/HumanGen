@@ -123,15 +123,14 @@ export default function ArchivePage() {
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <AnimatePresence mode="popLayout">
                       {artworks.map((artwork) => (
                         <ArtworkCard
                           key={artwork.id}
                           artwork={artwork}
-                          onLike={handleLike}
+                          onLike={() => {}}
+                          allowLike={false}
                         />
                       ))}
-                    </AnimatePresence>
                   </div>
                 )}
               </>

@@ -117,6 +117,7 @@ export default function HomePage() {
                   key={artwork.id}
                   artwork={artwork}
                   onLike={handleLike}
+                  allowLike={true}
                 />
               ))}
             </AnimatePresence>
